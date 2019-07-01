@@ -80,6 +80,8 @@ if(!$retval)
 else
 {
 echo "Registry Succesfully\n";
+echo "<br><br><br><br>";
+   echo '<hr> <a href="cargaDatos.html"><input value="Volver a Carga de Datos" type="button" ></a>';
 }	
 	//cerramos la conexion
 	

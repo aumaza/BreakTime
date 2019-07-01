@@ -59,6 +59,8 @@
 	    
 	 }
 	 echo "</table>";
+	 echo "<br><br>";
+	 echo '<hr> <a href="informes.html"><input value="Volver a Informes" type="button" ></a>';
 	 }  
 	 
 	 else

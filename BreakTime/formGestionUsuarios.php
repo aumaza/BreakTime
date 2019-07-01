@@ -67,9 +67,10 @@ if($conn && strcmp($pass2, $pass1) == 0)
 	mysql_query($sqlInsert);	
 	echo "<br>";
 	echo 'Usuario Creado Satisfactoriamente';
+	
+	echo "<br><br><br><br>";
+   echo '<hr> <a href="menuPrincipal.html"><input value="Volver al Menu" type="button" ></a>';
 		
-	
-	
 }
 
 else

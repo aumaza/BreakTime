@@ -1,12 +1,12 @@
    <html>
     <head>
-    <title>Bienvenida</title>
+    <title>Bienvenido</title>
     <link rel="stylesheet"  type="text/css" media="screen" href="estilo.css" />
     </head>
     <body>
     <div class="container">
     <div class="main">
-    <h2>Bienvenida</h2>
+    <h2>Bienvenido</h2>
     
     <?php
     
@@ -26,15 +26,24 @@
 	$q = mysql_query($sql,$conn);	
 	
 	
-		if($q) 
+		if(!$q) 
 		{	
-			echo 'Bienvenido'. "<br><br>". $user;	
-			echo '<a href="menuPrincipal.html"><br><br><input value="Ingresar" type="button" ></a><br>';	
+			mysql_error();
+			exit;			
+			
+			/*echo 'Bienvenido'. "<br><br>". $user;	
+			echo '<a href="menuPrincipal.html"><br><br><input value="Ingresar" type="button" ></a><br>';*/	
 		}
+
+			if($user = mysql_fetch_assoc($q))
+			{
+				echo '<a href="menuPrincipal.html"><br><br><button type"submit"><img src="arrow-right.png" alt="10px" /> Ingresar</button></a><br>';		
+			}
 
 			else
 			{
 				echo "Usuario o Contraseña Incorrecta. Reintente!";
+				echo '<a href="validacion.html"><br><br><button type"submit"><img src="system-reboot.png" alt="10px" /> Reintentar</button></a><br>';	
 	
 			}
 	
