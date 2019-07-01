@@ -13,8 +13,8 @@
         <h2>Break Time</h2>
         <br>
 			<center>
-		  <a href="createDatabase.php"></a>        
-        <a href="menuPrincipal.html"><input value="Ingresar" type="button" ></a><br>
+		  <a href="createDatabase.php"><input value="Crear Base" type="button"></a><br>        
+        <a href="validacion.html"><input value="Ingresar" type="button" ></a><br>
         </center>
       </div>
     </div>

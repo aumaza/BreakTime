@@ -1,0 +1,32 @@
+   <html>
+    <head>
+    <title>Log-In</title>
+    <link rel="stylesheet"  type="text/css" media="screen" href="estilo.css" />
+    </head>
+    <body>
+    <div class="container">
+    <div class="main">
+    <h2>Log-In</h2>
+    
+    <form action="validacion.php" method="post">
+    
+    <label>Nombre Usuario</label>
+    <input name="nombreUsuario" type="text" placeholder="Nombre Apellido" required /><br>
+    
+    <label>Nickname</label><br>
+    <input name="nickname" type="text" placeholder="nickname" required /><br>
+    
+    <label>Password</label><br>
+    <input name="password1" type="password" placeholder="password" required /><br>
+    
+    
+    <center>
+    <input type="reset" value="Borrar" />
+    <input type="submit" value="Ingresar" />
+    </center>
+    </div>
+    </div>
+    </form>
+    
+</body>
+</html>

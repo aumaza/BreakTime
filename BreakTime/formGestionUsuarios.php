@@ -55,25 +55,28 @@
 						$pass1 = mysql_real_escape_string($_POST["password1"], $conn);
 						$pass2 = mysql_real_escape_string($_POST["password2"], $conn);
 					   	
-	
-		$sqlInsert = "INSERT INTO usuarios ".
+	$sqlInsert = "INSERT INTO usuarios ".
 		"(nombreApellido,nickName,password)".
 		"VALUES ".
       "('$nombre','$user','$pass1')";
-  			
+		
 
-$retval = mysql_query($sqlInsert,$conn);
 
-if($retval && strcmp($pass1, $pass2) == 0)
+if($conn && strcmp($pass2, $pass1) == 0) 
 {
-	echo "<br>";	
+	mysql_query($sqlInsert);	
+	echo "<br>";
 	echo 'Usuario Creado Satisfactoriamente';
+		
+	
+	
 }
 
 else
 {
-	echo "<br>";	
-	echo "Las Contraseñas no Coinciden. Intente Nuevamente!";
+	echo "<br>";
+	echo "Las Contraseñas no Coinciden. Intente Nuevamente!";		
+	
 }	
 	//cerramos la conexion
 	
